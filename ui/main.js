@@ -54,6 +54,7 @@ button.onclick = function() {
         console.log(names[i]);
     }
     var ul = document.getElementById("namelist");
+    console.log('name is' +name[i]);
     ul.innerHTML = list;
     };
   

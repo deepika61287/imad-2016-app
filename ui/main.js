@@ -63,11 +63,10 @@ button.onclick = function() {
                 ul.innerHTML = list;
             }
         }    
-    };
     //make req to server and send the name
     
    
     
    
   
-};
+    };

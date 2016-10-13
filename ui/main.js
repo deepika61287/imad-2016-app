@@ -9,18 +9,21 @@ console.log('Loaded!');
 
 var img = document.getElementById('madi');
 var marginLeft = 0;
-function moveRight() {
+function moveRight() 
+{
     marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
     
 }
-img.onclick = function() {
+img.onclick = function()
+{
     var interval = setInterval(moveRight , 50);
     //img.style.marginLeft = '100px';
 };
 
 var button = document.getElementById('counter');
-button.onclick = function() {
+button.onclick = function() 
+{
   var request = new XMLHttpRequest();
   request.onreadystatechange = function() {
     if(request.readyState === XMLHttpRequest.DONE)
@@ -33,7 +36,7 @@ button.onclick = function() {
             span.innerHTML = counter.toString();
         }
     }
-  };
+};
   
   request.open('GET','http://deepika61287.imad.hasura-app.io/counter',true);
   request.send(null);
@@ -65,9 +68,9 @@ button.onclick = function() {
             }
         }    
     //make req to server and send the name
-    
-   
-    
-     }; 
+    }; 
   
-    };
+    request.open('GET','http://deepika61287.imad.hasura-app.io/submit-name?name' +name, true);
+    request.send(null);
+    
+  };

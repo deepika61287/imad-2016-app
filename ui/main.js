@@ -9,8 +9,7 @@ console.log('Loaded!');
 
 var img = document.getElementById('madi');
 var marginLeft = 0;
-function moveRight() 
-{
+function moveRight() {
     marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
     
@@ -22,8 +21,7 @@ img.onclick = function()
 };
 
 var button = document.getElementById('counter');
-button.onclick = function() 
-{
+button.onclick = function() {
   var request = new XMLHttpRequest();
   request.onreadystatechange = function() {
     if(request.readyState === XMLHttpRequest.DONE)
@@ -68,9 +66,9 @@ button.onclick = function()
             }
         }    
     //make req to server and send the name
-    }; 
+   }; 
   
     request.open('GET','http://deepika61287.imad.hasura-app.io/submit-name?name' +name, true);
     request.send(null);
     
-  };
+  

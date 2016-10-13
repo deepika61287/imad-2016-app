@@ -27,7 +27,9 @@ var articles = {
             
   <p> TWO </p>
             
-  `},
+  `,
+    color: '#00BCD4'
+  },
   'article-three' : {
   title : 'Article Three | Deepika',
   heading : 'Article Three',

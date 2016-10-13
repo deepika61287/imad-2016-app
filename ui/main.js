@@ -66,9 +66,9 @@ button.onclick = function() {
             }
         }    
     //make req to server and send the name
-   }; 
+  
   
     request.open('GET','http://deepika61287.imad.hasura-app.io/submit-name?name' +name, true);
     request.send(null);
-    
+     };
   

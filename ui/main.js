@@ -53,7 +53,7 @@ button.onclick = function() {
         list+= '<li>' + names[i] + '</li>'
         console.log(names[i]);
     }
-    var ul = document.getElementById("namelist");
+    var ul = document.getElementById('namelist');
     console.log('names are' +list);
     ul.innerHTML = list;
     };

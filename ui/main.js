@@ -43,19 +43,31 @@ button.onclick = function() {
   var submit = document.getElementById("submit_btn");
   submit.onclick = function() {
     
+    var request = new XMLHttpRequest();
+     //capture the name and display the set of names submitted
+     
+     request.onreadystatechange = function() {
+    if(request.readyState === XMLHttpRequest.DONE)
+        {
+            if(request.status === 200)
+            {
+               var names = ['name1','name2','name3','name4'];
+               var list = '';
+               for (var i = 0; i < names.length; i++)
+                {
+                    list+= '<li>' + names[i] + '</li>'
+                    console.log(names[i]);
+                } 
+                var ul = document.getElementById('namelist');
+                console.log('names are' +list);
+                ul.innerHTML = list;
+            }
+        }    
+    };
     //make req to server and send the name
     
-    //capture the name and display the set of names submitted
-    var names = ['name1','name2','name3','name4'];
-    var list = '';
-    for (var i = 0; i < names.length; i++)
-    {
-        list+= '<li>' + names[i] + '</li>'
-        console.log(names[i]);
-    }
-    var ul = document.getElementById('namelist');
-    console.log('names are' +list);
-    ul.innerHTML = list;
-    };
+   
+    
+   
   
 };

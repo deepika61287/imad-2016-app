@@ -53,6 +53,7 @@ submit.onclick = function() {
         {
             var names = request.responseText;
             names = JSON.parse(names);
+            console.log("check 1: JSON parson cmd" +names)
             var list = '';
             for(var i = 0; i < names.length; i++)
             {

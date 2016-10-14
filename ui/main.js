@@ -43,8 +43,7 @@ button.onclick = function() {
 
 
 var submit = document.getElementById('submit_btn');
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 submit.onclick = function() {
   var request = new XMLHttpRequest();
   request.onreadystatechange = function() {
@@ -69,8 +68,9 @@ submit.onclick = function() {
     }
 };
   
-  
-  request.open('GET','http://deepika61287.imad.hasura-app.io/submit-name?name' +name,true);
+  var nameInput = document.getElementById('name');
+  var name = nameInput.value;
+  request.open('GET','http://deepika61287.imad.hasura-app.io/submit-name?name=' +name,true);
   request.send(null);
   
 };

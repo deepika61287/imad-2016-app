@@ -39,4 +39,5 @@ button.onclick = function() {
   request.open('GET','http://deepika61287.imad.hasura-app.io/counter',true);
   request.send(null);
   
+};
  
